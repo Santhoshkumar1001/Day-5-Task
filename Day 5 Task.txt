@@ -1,0 +1,71 @@
+A.Print odd numbers in an array
+
+const number = [1,2,3,4,5]
+
+let oddnumber = number.filter((value)=> value %2 !==0);
+
+console.log("oddnumber :" + oddnumber);
+
+
+B.Convert all the strings to title caps in a string array
+
+let titleCase = ((string) => {
+    var sentence = string.toLowerCase().split(" ")
+    for(var i = 0; i< sentence.length; i++)
+    {
+      sentence[i]=sentence[i][0].toUpperCase() + sentence[i].slice(1)  
+      } 
+      console.log(sentence.join(" "));  //  Can Do Anything
+      return sentence;
+    } );
+    titleCase("CAN DO ANYTHING");
+
+C.Sum of all numbers in an array
+
+let items = [45,23,54,46,87];
+let result = items.reduce((previouValue, CurrentValue) => previouValue + CurrentValue);
+console.log("result:" + result);  //result:255
+
+D.Return all the prime numbers in an array
+
+var numArray = [2, 3, 4, 5, 6, 7, 8, ]
+numArray = numArray.filter((number) => {
+  for (var i = 2; i <= Math.sqrt(number); i++) {
+    if (number % i === 0) return false;
+  }
+  return true;
+});
+
+console.log(numArray);
+
+E.Return all the palindromes in an array
+function checkPalindrome(str) {
+    
+     const len = str.length;
+    
+    for (let i = 0; i < len / 2; i++) {
+      
+    if (str[i] !== str[len - 1 - i]) {
+       console.log("NOT a palindrome");
+       }
+     }     console.log("The string is a palindrome");
+   }
+
+   checkPalindrome([121]);
+
+F.Remove duplicates from an array
+
+et chars = ['A', 'B', 'A', 'C', 'B'];
+
+let uniqueChars = chars.filter((c, index) => {
+    return chars.indexOf(c) === index;
+});
+
+console.log(uniqueChars);
+
+
+
+
+
+
+
